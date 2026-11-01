@@ -1,0 +1,6 @@
+{
+  "name": "tommed.de",
+  "description": "Minimalistische Landingpage für tommed.de mit GitHub Pages Konfiguration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

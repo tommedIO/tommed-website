@@ -1,11 +1,42 @@
-<div align="center">
+# tommed.de
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Minimalistische Landingpage für [tommed.de](https://tommed.de).
 
-  <h1>Built with AI Studio</h2>
+## GitHub Pages Bereitstellung
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+Dieses Repository ist für die automatische Veröffentlichung über **GitHub Pages** vorbereitet.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### 1. In GitHub Repository aktivieren
+1. Gehe in deinem GitHub Repository auf **Settings** > **Pages**.
+2. Wähle unter **Build and deployment** > **Source**: **GitHub Actions** aus.
+3. Bei jedem Push auf `main` oder `master` baut der GitHub Action Workflow (`.github/workflows/deploy.yml`) die Seite und veröffentlicht sie.
 
-</div>
+### 2. Eigene Domain `tommed.de` konfigurieren
+- Die Datei `public/CNAME` enthält bereits `tommed.de`.
+- Unter **Settings** > **Pages** > **Custom domain** trägst du `tommed.de` ein und aktivierst **Enforce HTTPS**.
+
+### 3. DNS-Einstellungen bei deinem Domain-Registrar
+Erstelle folgende DNS-Einträge für `tommed.de`:
+
+#### A-Records (für `tommed.de` / Apex-Domain):
+- `185.199.108.153`
+- `185.199.109.153`
+- `185.199.110.153`
+- `185.199.111.153`
+
+#### CNAME-Record (für `www.tommed.de`):
+- `www` CNAME `<dein-github-benutzername>.github.io.`
+
+---
+
+## Lokale Entwicklung
+
+```bash
+npm install
+npm run dev
+```
+
+Build erstellen:
+```bash
+npm run build
+```
